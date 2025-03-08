@@ -1,0 +1,17 @@
+<div>
+  <h2>Percentual de Faturamento por Estado</h2>
+  <table>
+    <thead>
+      <th>Estado</th>
+      <th>Faturamento</th>
+      <th>Percentual</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of faturamento">
+        <td>{{ item.estado }}</td>
+        <td>{{ item.valor | currency:'BRL' }}</td>
+        <td>{{ item.percentual?.toFixed(2) }}%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
