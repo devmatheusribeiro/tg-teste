@@ -3,9 +3,13 @@ import { Teste1Component } from './pages/teste-1/teste-1.component';
 
 export const routes: Routes = [
   {
-    path: 'teste1',
+    path: '',
     pathMatch: 'full',
-    component: Teste1Component
+    redirectTo: 'teste1'
+  },
+  {
+    path: 'teste1',
+    loadComponent: () => import('./pages/teste-1/teste-1.component').then(c => c.Teste1Component)
   },
   {
     path: 'teste2',
