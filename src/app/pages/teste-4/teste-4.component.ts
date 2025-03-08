@@ -9,7 +9,7 @@ import { TesteDadosService } from '../../shared';
   styleUrl: './teste-4.component.scss'
 })
 export class Teste4Component {
- faturamento: any[] = [];
+ faturamento: any[] = []
 
   constructor(private _dadosService: TesteDadosService) {}
 
@@ -19,16 +19,16 @@ export class Teste4Component {
 
   private buscarDadosFaturamento() {
     this._dadosService.buscarDadosFaturamentoEstados().subscribe((response) => {
-      this.faturamento = response;
-      this.calcularPercentual();
+      this.faturamento = response
+      this.calcularPercentual()
     })
   }
 
   calcularPercentual() {
-    const total = this.faturamento.reduce((sum, item) => sum + item.valor, 0);
+    const total = this.faturamento.reduce((sum, item) => sum + item.valor, 0)
     this.faturamento = this.faturamento.map(item => ({
       ...item,
       percentual: (item.valor / total) * 100
-    }));
+    }))
   }
 }

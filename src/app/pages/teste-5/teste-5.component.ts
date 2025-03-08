@@ -8,14 +8,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './teste-5.component.scss'
 })
 export class Teste5Component {
-  texto: string = '';
-  resultado: string = '';
+  texto: string = ''
+  resultado: string = ''
 
   inverterString() {
-    let invertida = '';
+    let invertida = ''
     for (let i = this.texto.length - 1; i >= 0; i--) {
-      invertida += this.texto[i];
+      invertida += this.texto[i]
     }
-    this.resultado = invertida;
+    this.resultado = invertida
   }
 }
